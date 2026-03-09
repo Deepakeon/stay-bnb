@@ -16,11 +16,11 @@ export default function DashboardPage() {
     let rooms = mockRooms;
 
     if (searchQuery.trim()) {
-      const query = searchQuery.toLowerCase();
+      const query = searchQuery.toLowerCase()?.trim();
       rooms = rooms.filter(
         (room) =>
-          room.title.toLowerCase().includes(query) ||
-          room.location.toLowerCase().includes(query)
+          room.title.toLowerCase()?.trim().includes(query) ||
+          room.location.toLowerCase()?.trim().includes(query)
       );
     }
 
