@@ -1,0 +1,37 @@
+## Design Decisions
+
+### State Management: Zustand
+I chose Zustand for state management because:
+- **Simplicity**: Minimal boilerplate compared to Redux
+- **Performance**: Built-in memoization and selective subscriptions
+- **TypeScript**: Excellent TypeScript support out of the box
+- **No Provider Wrapping**: Direct store access without context providers
+
+### UI Framework: React + TypeScript
+- **Type Safety**: TypeScript prevents runtime errors and improves developer experience
+- **Component Reusability**: Modular components for maintainable code
+
+### Styling: Tailwind CSS
+- **Utility-First**: Rapid UI development with atomic classes
+- **Responsive**: Built-in responsive design utilities
+- **Consistency**: Design system approach with consistent spacing and colors
+
+## Edge Case Handling
+
+### Loading States
+- **Skeleton Screens**: Loading spinner content during data loading
+- **Optimistic Updates**: Immediate UI feedback for user actions
+- **Progress Indicators**: Spinners for longer operations
+- **Empty States**: Clear messaging when no data is available
+
+### Scaling for 1000+ Rooms
+- **Virtualization**: Implement virtualization for long lists (react-virtualized)
+- **Pagination**: Server-side pagination for large datasets
+- **Search/Filter**: Client-side filtering with debounced search
+- **Caching Strategy**: Aggressive caching with cache invalidation
+- **Lazy Loading**: Load room images only when visible
+
+## Performance Optimizations
+
+### Code Splitting
+- **Route-based**: Lazy loading for different pages
