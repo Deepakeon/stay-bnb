@@ -1,5 +1,6 @@
 import { calculateNights, checkAvailability } from "@/lib/utils";
 import { useBookingsStore } from "@/store/bookingsStore";
+import { toast } from "sonner";
 
 export const useBookings = () => {
   const bookingIndex = useBookingsStore((state) => state.bookingIndex);
@@ -59,6 +60,7 @@ export const useBookings = () => {
       endDate,
       totalPrice,
     });
+    toast.success("Booking confirmed!");
   };
 
   return {

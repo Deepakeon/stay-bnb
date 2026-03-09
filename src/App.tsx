@@ -5,6 +5,7 @@ import ProtectedLayout from "./components/layout/ProtectedLayout";
 import LoginPage from "@/pages/LoginPage";
 import NotFound from "@/pages/NotFound";
 import Spinner from "./components/ui/Spinner";
+import { Toaster } from "sonner";
 
 const DashboardPage = lazy(() => import("@/pages/DashboardPage"));
 const RoomDetailPage = lazy(() => import("@/pages/RoomDetailPage"));
@@ -18,6 +19,7 @@ const Loader = () => (
 
 const App = () => (
   <AuthProvider>
+    <Toaster/>
     <BrowserRouter>
       <Suspense fallback={<Loader />}>
         <Routes>
