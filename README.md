@@ -14,7 +14,7 @@ A modern, responsive room booking application built with React, TypeScript, and 
 ### Prerequisites
 
 - Node.js (version 16 or higher)
-- npm or yarn
+- npm
 
 ### Installation
 
@@ -27,15 +27,11 @@ cd stay-bnb
 2. Install dependencies:
 ```bash
 npm install
-# or
-yarn install
 ```
 
 3. Start the development server:
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
 4. Open your browser and navigate to `http://localhost:8080`
